@@ -1,0 +1,544 @@
+@mixin link-free-trial {
+    text-decoration: none;
+    color: #FF7676;
+    border-bottom: 3px solid #F8D1BE;
+}
+
+$mobile--mrgn: 0px 20px;
+$tablet--mrgn: 0px 100px;
+
+html, body, h1, div {
+    margin: 0;
+    padding: 0;
+    font-family: Alegreya;
+}
+
+.header-container {
+    background: linear-gradient(180deg, #FFE1D1 0%, #FFDBCA 100%);
+}
+
+.burger-icn {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+
+    @media (min-width: 420px) {
+        width: 80%;
+    }
+
+    @media (min-width: 1024px) {
+        display: none;
+    }
+}
+
+.burger--line {
+    height: 3px;
+    width: 30px;
+    border-radius: 2px;
+    background: #fff;
+
+    &:nth-child(2) {
+        margin: 5px 0px;
+    }
+}
+
+.navigation-container {
+    display: flex;
+    flex-direction: row;
+    color: #000;
+    padding: 0px 30px;
+    padding-top: 40px;
+
+    @media (min-width: 1024px) {
+        padding: 0px 120px; 
+    }
+}
+
+.menu--nav-container, .logo--nav-container {
+    display: none;
+    @media (min-width: 1024px) {
+        display: flex;
+        width: 40%;
+    }
+}
+
+.link--nav-container {
+    width: 40%;   
+
+    @media (min-width: 420px) {
+        width: 20%;
+    }
+
+    @media (min-width: 1024px) {
+        width: 10%;
+        margin: 0 auto;
+    }
+
+    a {
+        font-size: 20px;
+        @include link-free-trial();
+    }
+}
+
+.logo--nav-container {
+    label {
+        margin-left: 10px;
+        font-size: 30px;
+        font-weight: bold;
+        color: #6A4A39;
+    }
+}
+
+.menu--nav-container {
+    font-size: 20px;
+    justify-content: space-between;
+
+    a {
+        color: #000;
+        text-decoration: none;
+        border: 3px solid transparent;
+    }
+}
+
+.background-image-compilation {
+    background:
+    url("/Users/meganelloso/Desktop/study/course/img/sun.png") no-repeat bottom,
+    url("/Users/meganelloso/Desktop/study/course/img/Vector 16.png") no-repeat bottom,  /* On top,    like z-index: 4; */
+    url("/Users/meganelloso/Desktop/study/course/img/Vector 16.1.png") no-repeat bottom,   /*            like z-index: 3; */
+    url("/Users/meganelloso/Desktop/study/course/img/Vector 16.2.png") no-repeat bottom;
+    background-size: 385.55px 205.79px, auto, auto, auto;
+    height: 500px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.background-image-compilation > img {
+    width: 456.37px;
+    height: 343px;
+    margin: 0px 0px 40px 50px;
+}
+
+.mobdsply--big-plane {
+    display: none;
+}
+
+.header-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: $mobile--mrgn;
+    margin-bottom: 85px;
+
+    @media (min-width: 420px) {
+        width: 350px;
+        margin: $tablet--mrgn;
+        margin-bottom: -20px;
+    }
+
+    @media (min-width: 1024px) {
+        width: 284px;
+        margin-left: 340px;
+        margin-bottom: -25px;
+    }
+}
+
+.header-content + .webdsply--plane {
+    display: none;
+    @media (min-width: 1080px) {
+        display: flex;
+    }
+}
+
+.header-content {
+    h1 {
+        font-weight: bold;
+        font-size: 40px;
+        color: #3F342F;
+        margin-bottom: 30px;
+        
+        @media (min-width: 1080px) {
+            font-size: 60px;
+        }
+
+        @media (min-width: 420px) {
+            font-size: 50px;
+        }
+    }
+
+    p {
+        font-size: 16px;
+        color: #333333;
+        margin-bottom: 50px;
+
+        @media (min-width: 420px) {
+            font-size: 20px;
+        }
+    }
+}
+
+.btn--main {
+    background: #333333;
+    color: #fff;
+    box-shadow: 0px 5px 10px rgba(255, 163, 148, 0.1);
+    border-radius: 5px;
+    font-family: Alegreya;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+    height: 44px;
+    border: 0px;
+
+    @media (min-width: 420px) {
+        width: 200px;
+    }
+}
+
+.first-container-divider {
+    height: 1px;
+    background: #FF8989;
+}
+
+.second-container {
+    background: url("/Users/meganelloso/Desktop/study/course/img/Group-2.png");
+    background-size: cover;
+}
+
+.second-container--img-listing {
+    background: transparent;
+    display: flex;
+    align-items: flex-end;
+
+    @media (min-width: 1024px) {
+        background: linear-gradient(0deg, #FFFFFF 22.5%, #FFF8F5 100%);
+    }
+}
+
+.first-img--second-container {
+    display: none;
+
+    @media (min-width: 1024px) {
+        display: block;
+        margin-top: -570px;
+    }
+}
+
+.img-plane {
+    display: none;
+
+    @media (min-width: 1024px) {
+        display: block;
+        width: 344px;
+        height: 175px;
+        margin-right: 10px;
+    }
+}
+
+.img-luggage {
+    display: none;
+
+    @media (min-width: 420px) {
+        display: block;
+        margin: 140px auto auto 100px;
+    }
+}
+.mobile-img-luggage {
+    display: block;
+    margin: $mobile--mrgn;
+    margin-top: 150px;
+
+    @media (min-width: 420px) {
+        display: none;
+    }
+}
+
+@mixin content-item--mobile {
+    width: 100%;
+    margin: $mobile--mrgn;
+}
+
+@mixin content-item--tab {
+    width: 350px;
+    margin: $tablet--mrgn;
+}
+
+@mixin content-item-h1--mob {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+@mixin content-item-p {
+    font-size: 16px;
+    color: #333333;
+}
+
+.second-content--listing {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 1024px) {
+        flex-direction: row;
+    }
+
+    .content-item {
+        @include content-item--mobile();
+
+        @media (min-width: 420px) {
+            @include content-item--tab();
+        }
+
+        h1 {
+            @include content-item-h1--mob();
+            
+            @media (min-width: 420px) {
+                font-size: 30px;
+            }
+        }
+    
+        p {
+            @include content-item-p();
+
+            @media (min-width: 420px) {
+                font-size: 20px;
+            }
+
+            @media (min-width: 1024px) {
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+
+.second-content--listing > .content-item:first-child {
+    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 420px) {
+        margin-top: 75px;
+    }
+
+    @media (min-width: 1024px) {
+        margin-top: 90px;
+        width: 250px;
+        margin-left: 177px;
+    }
+
+    .stairs--img {
+        display: none;
+
+        @media (min-width: 1024px) {
+            display: flex;
+            align-self: flex-end;
+            margin-right: -100px;
+            margin-top: -70px;
+        }
+    }
+
+}
+
+.second-content--listing > .content-item:last-child {
+    margin-top: 60px; 
+
+    @media (min-width: 1024px) {
+        width: 340px;
+        margin-left: 240px;
+        
+        p {
+            width: 246px;
+        }
+    }
+
+    @media (min-width: 420px) {
+        margin-top: 90px;
+        
+        h1 {
+             width: 365px;
+         }
+    }
+}
+
+.img-listing  {
+    margin-top:-400px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    @media (min-width: 1024px) {
+        margin-top: -280px;
+    }
+}
+
+.binoculars-web {
+    display: none;
+
+    @media (min-width:420px) {
+        display: flex;
+        // width: 400px;
+    }
+}
+
+.binoculars-mobile {
+    display: flex;
+
+    @media (min-width: 420px) {
+        display: none;
+    }
+}
+
+.third-content--listing {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (min-width: 1024px) {
+        justify-content: center;
+        margin: 50px auto;
+    }
+}
+
+.third-content--listing > .content-item {
+    @include content-item--mobile();
+
+    h1 {
+        font-weight: bold;
+        font-size: 24px;
+        margin-bottom: 25px;
+
+        @media (min-width: 420px) {
+            font-size: 30px;
+        }
+    }
+
+    p {
+        @include content-item-p();
+        width: 250px;
+
+        @media (min-width: 420px) {
+            font-size: 20px;
+        }
+
+        @media (min-width: 1024px) {
+            margin-bottom: 50px;
+        }
+    }
+
+    @media (min-width: 420px) {
+        @include content-item--tab();
+    }
+
+    @media (min-width: 1024px) {
+        width: 230px;
+        margin-right: 50px;  
+    }
+}
+
+
+.third-container {
+    background: #E5E5E5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0px;
+
+    h1 {
+        font-size: 30px;
+        margin-top: 60px;
+
+        @media (min-width: 420px) {
+            font-size: 40px;
+            margin-top: 30px;
+        }
+    }
+
+    p {
+        color: #6A4A39;
+        width: 70%;
+        text-align: center;
+        margin: 10px 0px 60px 0px;
+
+        @media (min-width: 420px) {
+            width: 20%;
+            margin: 10px 0px 30px 0px;
+        }
+    }
+
+    .btn--main {
+        width: 80%;
+        margin-bottom: 100px;
+
+        @media (min-width: 1024px) {
+            width: 200px;
+        }
+    }
+}
+
+.furniture-img, .climbing-web {
+    display: none;
+
+    @media (min-width: 768px) {
+        display: block;
+    }
+}
+
+.furniture-img--mob, .climbing-mob {
+    display: block;
+
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.footer-container {
+    background: #FFFCFB;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 65px 0px 45px 0px;
+
+    span {
+        color: #BFBDBC;
+        margin: $mobile--mrgn;
+        text-align: center;
+    }
+
+    .copyright-link {
+        font-weight: bold;
+        color: #000;
+    } 
+
+}
+
+.link-listings {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 15px 0px 50px 0px;
+}
+
+.link-item {
+    display: flex;
+    flex-direction: column;
+
+    a {
+        font-size: 16px;
+        font-weight: bold;
+        color: #000;
+        text-decoration: none;
+        opacity: 0.7;
+
+        @media (min-width: 420px) {
+            font-size: 20px;
+        }
+    }
+
+    a:nth-child(1) {
+        margin-bottom: 20px;
+    }
+
+    .link-red-underline {
+        @include link-free-trial();
+    }
+}
